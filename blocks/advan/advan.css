@@ -1,0 +1,46 @@
+.advan{
+ 
+padding-top: 60px;
+padding-bottom: 100px;
+}
+.advan__container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    height: 400px;
+    
+    margin: 0 auto;
+}
+@media screen and (max-width:1024px) {
+    .advan__container{
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 100px;
+       height: 100%;
+    }
+    .advan{
+        margin-top: 150px;
+    }
+}
+.advan__box{
+    display: flex;
+    align-items: center;
+
+}
+.advan__title{
+    text-align: center;
+    font-size: 40px;
+}
+.advan__info{
+    width: 250px;
+    text-align: center;
+}
+.advan__img{
+    background-color: #4dccc6;
+    padding: 12px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 15px 8px  #4dccc6 ;
+}

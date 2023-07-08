@@ -1,0 +1,213 @@
+.map iframe{
+   border-radius: 40px;
+}
+.map{
+    margin-top: 200px;
+ /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=ffffff&c2=c9ffe4&gt=l&gd=dtt
+*/
+background: #FFFFFF;
+background: linear-gradient(180deg, #FFFFFF, #C9FFE4);
+   
+}
+.map__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.map__title{
+    text-align: center;
+    font-size: 40px;
+    color: whitesmoke;
+    width: fit-content;
+     background-color:  #4dccc6;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    padding: 12px;
+    z-index: 2   ;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+.map__box{
+    width: 700px;
+    display: flex;
+}
+.map__img{
+    width: 400px;
+}
+
+.vita__card2{
+    margin: 0 auto;
+    display: flex;
+    
+    border-radius: 40px;
+    justify-content: center;
+ }
+ .card__title2{
+     font-size: 25px;
+ }
+ .card__img2{
+     width:500px;
+     position: relative;
+     z-index: 1;
+     filter: brightness(150%);
+ }
+ 
+ 
+ .text__container2{
+  height: 100%;
+  border-radius: 19px;
+  padding: 0px 40px 40px 30px;
+ display: flex;
+ flex-direction: column;
+ }
+ .card__info2{
+     margin: 0;
+     padding-bottom: 30px;
+ }
+ .card__info2 span{
+     font-weight: 600;
+ }
+ .vita__info2{
+     width: 250px;
+     margin-top: 50px;
+     font-size: 20px;
+     line-height: normal;
+ }
+
+ #slider2 { /*положение слайдера*/
+     position: relative;
+     text-align: center;
+     top: 10px;
+ }
+ 
+ #slider2{ /*центровка слайдера*/
+     margin: 0 auto;
+ }
+ 
+ #slides2 article{ /*все изображения справа друг от доруга*/
+     width: 20%;
+     float: left;
+ }
+ 
+ #slides2 .image2{ /*устанавливает общий размер блока с изображениями*/
+     width: 500%;
+     line-height: 0;
+ }
+ 
+ #overflow2{ /*сркывает все, что находится за пределами этого блока*/
+     width: 100%;
+     overflow: hidden;
+ }
+ 
+ article img{ /*размер изображений слайдера*/
+     width: 500px;
+ }
+ 
+ #desktop2:checked ~ #slider2{ /*размер всего слайдера*/
+     max-width: 960px; /*максимальнная длинна*/
+ }
+ 
+ /*настройка переключения и положения для левой стрелки*/
+ /*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+ #switch5:checked ~ #controls label:nth-child(4), 
+ #switch6:checked ~ #controls label:nth-child(1),
+ #switch7:checked ~ #controls label:nth-child(2),
+ #switch8:checked ~ #controls label:nth-child(3)
+ {
+     background: url(../../images/prev.png) no-repeat; /*заливка фона картинкой без повторений*/
+     float: left;
+     margin: 0 0 0 -84px; /*сдвиг влево*/
+     display: block;
+     height: 68px;
+     width: 68px;
+ }
+ 
+ /*настройка переключения и положения для правой стрелки*/
+ #switch5:checked ~ #controls label:nth-child(2), 
+ #switch6:checked ~ #controls label:nth-child(3),
+ #switch7:checked ~ #controls label:nth-child(4),
+ #switch8:checked ~ #controls label:nth-child(1){
+     background: url(../../images/next.png) no-repeat; /*заливка фона картинкой без повторений*/
+     float: right;
+     margin: 0 -84px 0 0; /*сдвиг вправо*/
+     display: block;
+     height: 68px;
+     width: 68px;
+ }
+ 
+ label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+     cursor: pointer;
+ }
+ 
+ .all2 input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+     display: none;
+ }
+ 
+ /*позиция изображения при активации переключателя*/
+ #switch5:checked ~ #slides2 .image2{
+     margin-left: 0;
+ }
+ 
+ #switch6:checked ~ #slides2 .image2{
+     margin-left: -100%;
+ }
+ 
+ #switch7:checked ~ #slides2 .image2{
+     margin-left: -200%;
+ }
+ 
+ #switch8:checked ~ #slides2 .image2{
+     margin-left: -300%;
+ }
+ 
+ 
+ 
+ #controls2{ /*положение блока всех управляющих элементов*/
+     margin: -25% 0 0 0;
+     width: 100%;
+     height: 50px;
+ }
+ 
+ #active2 label{ /*стиль отдельного переключателя*/
+     border-radius: 10px; /*скругление углов*/
+     display: inline-block; /*расположение в строку*/
+     width: 15px;
+     height: 15px;
+     background: #bbb;
+ }
+ 
+ #active2{ /*расположение блока с переключателями*/
+     margin: 23% 0 0;
+     text-align: center;
+ }
+ 
+ #active2 label:hover{ /*поведение чекбокса при наведении*/
+     background: #76c8ff;
+     border-color: #777 !important; /*выполнение в любом случае*/
+ }
+ 
+ /*цвет активного лейбла при активации чекбокса*/
+ #switch5:checked ~ #active label:nth-child(1),
+ #switch6:checked ~ #active label:nth-child(2),
+ #switch7:checked ~ #active label:nth-child(3),
+ #switch8:checked ~ #active label:nth-child(4)
+ {
+     background: #18a3dd;
+     border-color: #18a3dd !important;
+ }
+ 
+ #slides2 .image2{ /*анимация пролистывания изображений*/
+     transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+ }
+ 
+ #controls2 label:hover{ /*прозрачность стрелок при наведении*/
+     opacity: 0.6;
+ }
+ 
+ #controls2 label{ /*прозрачность стрелок при отводе курсора*/
+     transition: opacity 0.2s ease-out;
+ }
