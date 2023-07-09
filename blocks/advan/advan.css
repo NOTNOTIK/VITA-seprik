@@ -2,6 +2,8 @@
  
 padding-top: 60px;
 padding-bottom: 100px;
+background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, url(https://catherineasquithgallery.com/uploads/posts/2023-02/1676700520_catherineasquithgallery-com-p-zelen-fon-dlya-prezentatsii-12.jpg) 57%);
 }
 .advan__container{
     display: flex;
@@ -13,6 +15,10 @@ padding-bottom: 100px;
     
     margin: 0 auto;
 }
+.advan__title{
+    text-align: center;
+    font-size: 40px;
+}
 @media screen and (max-width:1024px) {
     .advan__container{
         flex-wrap: nowrap;
@@ -20,27 +26,38 @@ padding-bottom: 100px;
         gap: 100px;
        height: 100%;
     }
-    .advan{
-        margin-top: 150px;
+    .advan__title{
+        font-size: 25px;
     }
 }
 .advan__box{
     display: flex;
     align-items: center;
+    height: 100px;
+    animation: scale 3s ease-in;
+    
+}
+@keyframes scale{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
-}
-.advan__title{
-    text-align: center;
-    font-size: 40px;
-}
 .advan__info{
     width: 250px;
     text-align: center;
 }
 .advan__img{
-    background-color: #4dccc6;
+    background-color: #5a7ca1;
     padding: 12px;
     width: 50px;
+    height: 50px;
     border-radius: 50px;
-    box-shadow: 0px 4px 15px 8px  #4dccc6 ;
+    box-shadow: 0px 4px 15px 8px   #5a7ca1 ;
 }

@@ -1,5 +1,5 @@
 .intro{
-    background: url(../../images/intro.svg) no-repeat ;
+    background: url(../../images/INRTO.svg);
     height: 900px;
     background-size: cover;
     position: relative;
@@ -7,9 +7,39 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width:900px) {
+.intro__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+.intro__image{
+    width: 50px;
+}
+.intro__title{
+    padding-top: 60px;
+    font-size: 38px;
+    width: 500px;
+    margin: 0;
+}
+
+.intro__info{
+    text-align: center;
+    color:#FDF4E3;
+    
+    font-size: 22px;
+   width: 600px;
+    
+    
+}
+@media screen and (max-width:1024px) {
     .intro{
       display: block;
+      text-align: center;
+    }
+    .intro__title{
+        text-align: center;
     }
 }
 .container{
@@ -30,41 +60,17 @@
 @media screen and (max-width:1024px) {
     .boxes{
         gap: 0px;
+        height: 100%; 
+        width: 100%;
     }
 }
 
-.intro__box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    padding-top: 10px;
-}
-.intro__image{
-    width: 50px;
-}
-.intro__title{
-    padding-top: 60px;
-    font-size: 38px;
-    text-align: left;
-    width: 500px;
-    margin: 0;
-}
 
-.intro__info{
-    text-align: center;
-    color:#FDF4E3;
-    
-    font-size: 22px;
-   width: 600px;
-    
-    
-}
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:1024px) {
 
     .intro__title{
         width: 100%;
-        font-size: 23   px;
+        font-size: 23px;
     }
     .intro__box{
         width: 100%;

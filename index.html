@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
   </head>
   <body>
     <header class="header">
@@ -15,7 +17,7 @@
       </div>
       <div class="button__container">
         <div class="number__container">
-          <h2 class="button__number">+7 (921) 128-22-07</h2>
+          <h2 class="button__number"><a>+7 (921) 128-22-07</a></h2>
           <p class="number__time">с 9.00 до 19.00</p>
         </div>
         <button class="custom-btn btn-13"><span>Заказать</span></button>
@@ -56,36 +58,45 @@
       </div>
       <div class="form__container">
         <p class="form__text">
-          Закажите установку септика VITA до конца июля и получите скидку 20% на
-          монтаж
+          Купите септик сейчас и получите 20% скидки на монтаж
         </p>
-        <form class="form" name="form_submit" method="get" novalidate>
+        <form class="form" name="form" id="form" method="get" novalidate>
           <fieldset class="set">
-            <input
-              type="text"
-              placeholder="Введите имя"
-              name="name"
-              class="input input_type_name"
-              required
-            />
-            <input
-              type="text"
-              placeholder="8(123) 456 78 90"
-              name="number"
-              class="input input_type_number"
-              required
-            />
-            <label for="" class="checkbox__label">
+            <div class="form__input_box">
               <input
-                type="checkbox"
-                name="checkbox"
-                id=""
-                class="input_type_checkbox"
+                type="text"
+                placeholder="Введите имя"
+                name="name"
+                id="name"
+                class="input input_type_name"
+                autocomplete="off"
+                required
               />
-              <p class="checkbox__info">
-                Я даю согласие на обработку персональных данных
-              </p>
-            </label>
+            </div>
+            <div class="form__input_box">
+              <input
+                type="tel"
+                placeholder="Введите номер телефона"
+                name="tel"
+                id="tel"
+                class="input input_type_number"
+                required
+              />
+            </div>
+            <div class="form__input_box">
+              <label for="" class="checkbox__label">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="input_type_checkbox"
+                  autocomplete="off"
+                />
+                <p class="checkbox__info">
+                  Я даю согласие на обработку персональных данных
+                </p>
+              </label>
+            </div>
             <button type="submit" class="submit__button btn-13">
               Обратный звонок
             </button>
@@ -98,87 +109,183 @@
         class="intro__bottom"
       />
     </section>
-    <section class="advan">
-      <h2 class="advan__title">ПРЕИМУЩЕСТВА <br />АВТОНОМНЫХ СИСТЕМ "VITA"</h2>
-      <div class="advan__container">
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
+    <section class="box">
+      <section class="advan">
+        <h2 class="advan__title">
+          ПРЕИМУЩЕСТВА <br />АВТОНОМНЫХ СИСТЕМ "VITA"
+        </h2>
+        <div class="advan__container">
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild6338-6138-4564-b464-633766646232__smell.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Никаких запахов!</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3339-3437-4564-a465-633034393165__50.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Самостоятельное обслуживание 1 раз в год</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3364-3432-4761-b564-646339663065__location.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Подходит для высокого уровня грунтовых вод</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3266-3436-4536-a166-353965633137__year.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Устойчивость к химии и непостоянному проживанию</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3437-3763-4262-b064-343763656331__garantee.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Устойчивость к залповым сбросам</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3437-3930-4464-b863-326632313636__photo.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Отсутствие засоров</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild3934-6162-4661-b130-323237373132__weathe.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Защита электрики от затопления</h3>
+          </div>
+          <div class="advan__box">
+            <img
+              src="https://вита-септик.рф/images/tild6539-6138-4036-b935-653065333234___9.svg"
+              alt=""
+              class="advan__img"
+            />
+            <h3 class="advan__info">Автономная работа без внесения биопрепаратов</h3>
+          </div>
         </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
+      </section>
+      <section class="vita">
+        <h2 class="vita__title">НАША ПРОДУКЦИЯ</h2>
+
+      
+        <div class="vita__container">
+          <div class="vita__card">
+            <img
+              src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png"
+              alt=""
+              class="card__img"
+            />
+
+            <div class="text__container">
+              <h3 class="card__title">VITA (ЛАЙТ)</h3>
+              <p class="card__info">
+                <span>Вместительность</span>: 1-8 (Зависит от комплектации)
+              </p>
+              <p class="card__info"><span>Сброс</span>: до 420Л</p>
+              <p class="card__info">
+                <span>Размеры</span>: 1120 Х 1120 Х 1800 (Зависит от
+                комплектации)
+              </p>
+              <p class="vita__info">
+                Септики VITA являются лидирующими на рынке септиков. В цену
+                входит <span> консультация, доставка, монтаж</span>
+              </p>
+              <h3 class="vita__sum">ЦЕНА: По договоренности</h3>
+            </div>
+          </div>
         </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
+
+        <img
+          src="https://xn----7sbfomdo2bqhf.xn--p1ai/images/tild3762-3239-4333-a461-383464346230__cloud.svg"
+          alt=""
+          class="vita__bottom"
+        />
+      </section>
+      <section class="map">
+        <h2 class="map__title">ПОЧЕМУ МЫ?</h2>
+        <div class="map__container">
+          <div class="vita__container2">
+            <div class="vita__card2">
+              <img src="./images/MAP.jpg" alt="" class="card__img2" />
+
+              <div class="text__container">
+                <h3 class="card__title2">
+                  Включил в розетку и забыл , отличная станция VITA
+                </h3>
+                <p class="vita__info2">
+                  Поставил эту станцию Виту чисто по рекомендации инженера
+                  который приехал ко мне на замер, до этого пытался углубиться
+                  во всю эту тематику но просто устал читать про эти все
+                  станции, лосы, снбо и так далее, голову всю забил ... в итоге
+                  решил просто довериться организации в которую обратился и
+                  конкретно инженеру, после часа общения с инженером (Евгением),
+                  ясно было, что человек эксперт а не шабашник, организация
+                  работает давно имеет кучу разных отзывов ... но в итоге все
+                  прошло отлично.  эта Вита работает четко да и честно говоря
+                  просто включил ее в розетку и забыл про нее .
+                </p>
+                <h3 class="vita__sum2">ДОСТОИНСТВА:<br> Консультирование на высшем уровне <br> Быстрая доставка и монтаж <br>  Наличие гарантии</h3>
+                <h3 class="vita__sum2">НЕДОСТАТКИ:<br> Не нашел </h3>
+              </div>
+            </div>
+          </div>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f074b015aa6f83b898e4f09cfff1e56ca6d0762945f9c625214d002a9b8b837&amp;source=constructor"
+            width="625"
+            height="625"
+            frameborder="0"
+          ></iframe>
         </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-        <div class="advan__box">
-          <img
-            src="https://вита-септик.рф/images/tild3564-3934-4238-b537-326565393432__electro.svg"
-            alt=""
-            class="advan__img"
-          />
-          <h3 class="advan__info">Высокая надежность- поставил и забыл</h3>
-        </div>
-      </div>
+      </section>
     </section>
-    <section class="vita">
-      <h2 class="vita__title">КАКОЙ СЕПТИК ПОДОЙДЕТ ВАМ?</h2>
-       <div class="vita__container">
-            
+    <footer class="footer">
+      <div class="logo__container">
+        <img src="./images/logo.png" alt="LOGO" class="header__logo" />
+        <p class="header__info">Установка автономных канализаций с 2014 года</p>
+      </div>
+   
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--  
         <div class="all">
             <input checked type="radio" name="respond" id="desktop">
                 <article id="slider">
@@ -254,153 +361,5 @@
                     </div>
                 </article>
         </div>
-           <!-- <div class="vita__card">
-                <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-                <div class="text__container">
-                <h3 class="card__title">VITA 3 (ЛАЙТ)</h3>
-                <p class="card__info"><span>Вместительность</span>: 1-3</p>
-                <p class="card__info"><span>Сброс</span>: 200Л</p>
-                <p class="card__info"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                <p class="vita__info">Самый компактный из всех вариантов, идеально подходит для небольшой семьи на трех человек</p>
-                <h3 class="vita__sum">ЦЕНА: от 102.700</h3>               
-            </div>
-               
-            </div>  
-            <div class="vita__card">
-                <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-            
-              <div class="text__container">
-                <h3 class="card__title">VITA 5 (ЛАЙТ)</h3>
-                <p class="card__info"><span>Вместительность</span>: 1-5</p>
-                <p class="card__info"><span>Сброс</span>: 290Л</p>
-                <p class="card__info"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                <p class="vita__info">Ходовой вариант, используется повсеместно, золотая середина по цене и размеру</p>
-                <h3 class="vita__sum">ЦЕНА: от 122.700</h3>           
-            </div>
-            </div>  
-            <div class="vita__card">
-                <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-                <div class="text__container">
-                <h3 class="card__title">VITA 6+ (ЛАЙТ)</h3>
-                <p class="card__info"><span>Вместительность</span>: 1-7</p>
-                <p class="card__info"><span>Сброс</span>: 360Л</p>
-                <p class="card__info"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                <p class="vita__info">Огромный короче да</p>
-                <h3 class="vita__sum">ЦЕНА: от 152.700</h3>               
-            </div>
-            </div>  
-            <div class="vita__card">
-                <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-            
-              <div class="text__container">
-                <h3 class="card__title">VITA 8 (ЛАЙТ)</h3>
-                <p class="card__info"><span>Вместительность</span>: 1-8</p>
-                <p class="card__info"><span>Сброс</span>: 420Л</p>
-                <p class="card__info"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                <p class="vita__info">Самый объемный из всех вариантов, идеально подходит для большой семьи</p>
-                <h3 class="vita__sum">ЦЕНА: от 182.700</h3>           
-            </div>
-            </div>-->
-           </div>
-           <img src="https://xn----7sbfomdo2bqhf.xn--p1ai/images/tild3762-3239-4333-a461-383464346230__cloud.svg" alt="" class="vita__bottom">
-        
-    </section>
-    <section class="map">
-           <h2 class="map__title">ПОЧЕМУ МЫ?</h2>
-           <div class="map__container">
-           <!-- <div class="map__box">
-                <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="map__img">
-                <p class="map__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, amet! Illo consequatur dolore nihil molestiae! Modi expedita, animi enim nostrum quisquam, maxime aspernatur reiciendis praesentium nisi minus ea, excepturi nobis!</p>
-            </div>-->
-            <div class="all2">
-                <input checked type="radio" name="respond2" id="desktop2">
-                    <article id="slider2">
-                            <input checked type="radio" name="slider2" id="switch5">
-                            <input type="radio" name="slider2" id="switch6">
-                            <input type="radio" name="slider2" id="switch7">
-                            <input type="radio" name="slider2" id="switch8">
-                        <div id="slides2">
-                            <div id="overflow2">
-                                <div class="image2">
-                                    <article>  <div class="vita__card2 img2">
-                                        <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-                                        <div class="text__container2">
-                                        <h3 class="card__title2">VITA 3 (ЛАЙТ)</h3>
-                                        <p class="card__info2"><span>Вместительность</span>: 1-3</p>
-                                        <p class="card__info2"><span>Сброс</span>: 200Л</p>
-                                        <p class="card__info2"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                                        <p class="vita__info2">Самый компактный из всех вариантов, идеально подходит для небольшой семьи на трех человек</p>
-                                        <h3 class="vita__sum2">ЦЕНА: от 102.700</h3>               
-                                    </div></article>
-                                    <article> <div class="vita__card2">
-                                        <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img">
-                                    
-                                      <div class="text__container2">
-                                        <h3 class="card__title2">VITA 5 (ЛАЙТ)</h3>
-                                        <p class="card__info2"><span>Вместительность</span>: 1-5</p>
-                                        <p class="card__info2"><span>Сброс</span>: 290Л</p>
-                                        <p class="card__info2"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                                        <p class="vita__info2">Ходовой вариант, используется повсеместно, золотая середина по цене и размеру</p>
-                                        <h3 class="vita__sum2">ЦЕНА: от 122.700</h3>           
-                                    </div>
-                                    </div>  </article>
-                                    <article> <div class="vita__card2">
-                                        <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img2">
-                                        <div class="text__container2">
-                                        <h3 class="card__title2">VITA 6+ (ЛАЙТ)</h3>
-                                        <p class="card__info2"><span>Вместительность</span>: 1-7</p>
-                                        <p class="card__info2"><span>Сброс</span>: 360Л</p>
-                                        <p class="card__info2"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                                        <p class="vita__info2">Огромный короче да</p>
-                                        <h3 class="vita__sum2">ЦЕНА: от 152.700</h3>               
-                                    </div>
-                                    </div>  </article>
-                                    <article> <div class="vita__card2">
-                                        <img src="https://вита-септик.рф/images/tild6237-3830-4163-a539-306537366339__vita_size8_1.png" alt="" class="card__img2">
-                                    
-                                      <div class="text__container2">
-                                        <h3 class="card__title2">VITA 8 (ЛАЙТ)</h3>
-                                        <p class="card__info2"><span>Вместительность</span>: 1-8</p>
-                                        <p class="card__info2"><span>Сброс</span>: 420Л</p>
-                                        <p class="card__info2"><span>Размеры</span>: 1120 Х 1120 Х 1800</p>
-                                        <p class="vita__info2">Самый объемный из всех вариантов, идеально подходит для большой семьи</p>
-                                        <h3 class="vita__sum2">ЦЕНА: от 182.700</h3>           
-                                    </div>
-                                    </div></article>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div id="controls2">
-                            <label for="switch5"></label>
-                            <label for="switch6"></label>
-                            <label for="switch7"></label>
-                            <label for="switch8"></label>
-                            
-                        </div>
-                        <div id="active2">
-                            <label for="switch5"></label>
-                            <label for="switch6"></label>
-                            <label for="switch7"></label>
-                            <label for="switch8"></label>
-                            
-                        </div>
-                    </article>
-            </div>
-           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f074b015aa6f83b898e4f09cfff1e56ca6d0762945f9c625214d002a9b8b837&amp;source=constructor" width="625" height="625" frameborder="0"></iframe>
-        </div>
-        </section>
-        <footer class="footer">
-            <div class="logo__container">
-                <img src="./images/logo.png" alt="LOGO" class="header__logo" />
-                <p class="header__info">Установка автономных канализаций с 2014 года</p>
-              </div>
-              <div class="button__container">
-                <div class="number__container">
-                    <p class="number__time"><a href="https://vk.com/vita_vol" class="footer__link">Вконтакте</a></p>
-                  <p class="number__time"><a href="mailto:septik_vita_vol@mail.ru" class="footer__link">Email</a></p>
-                </div>
-              </div>
-        </footer>
-  </body>
-</html>
+  
+           </div>-->

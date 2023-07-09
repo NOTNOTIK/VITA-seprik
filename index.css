@@ -12,6 +12,12 @@ body{
     font-family: 'Montserrat', sans-serif;
    
 }
+.box{
+    padding-top: 200px;
+   /* background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,255,153,1) 54%, rgba(90,124,161,1) 78%);
+*/
+}
 .header{
     height: 80px;
     margin: 0 auto;
