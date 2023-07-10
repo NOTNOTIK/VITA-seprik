@@ -8,6 +8,7 @@
     box-shadow: 10px 20px 30px white;
     position: relative;
     z-index: 3;
+    max-width: 100%;
 }
 .footer__link{
     color: #4dccc6;
