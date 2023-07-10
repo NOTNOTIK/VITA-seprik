@@ -228,6 +228,9 @@ background: linear-gradient(180deg, white, #C9FFE4);
         width: 90%;
         height: 400px;
     }
+    .map__title{
+        font-size: 20px;
+    }
     .vita__card2{
         display: block;
         width: 90%;

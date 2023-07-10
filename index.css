@@ -17,6 +17,7 @@ body{
    /* background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,255,153,1) 54%, rgba(90,124,161,1) 78%);
 */
+box-sizing: border-box;
 }
 .header{
     height: 80px;
@@ -67,7 +68,7 @@ body{
         display: block;
     }
     .button__container{
-         opacity: 0;
+       
     }
     .logo__container{
         justify-content: center;

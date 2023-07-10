@@ -19,6 +19,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, url(https://catherin
     text-align: center;
     font-size: 40px;
 }
+.advan__info{
+    width: 250px;
+    text-align: center;
+}
 @media screen and (max-width:1024px) {
     .advan__container{
         flex-wrap: nowrap;
@@ -28,6 +32,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, url(https://catherin
     }
     .advan__title{
         font-size: 25px;
+    }
+    .advan__info{
+        font-size: 15px;
     }
 }
 .advan__box{
@@ -49,10 +56,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, url(https://catherin
     }
 }
 
-.advan__info{
-    width: 250px;
-    text-align: center;
-}
+
 .advan__img{
     background-color: #5a7ca1;
     padding: 12px;
