@@ -20,6 +20,7 @@
 .vita__container{
     display: flex;
     flex-wrap: wrap;
+	align-items: center;
     justify-content: center;
     gap: 100px;
     padding-top: 80px;
@@ -39,20 +40,33 @@
 .vita__card{
    margin: 0 auto;
    display: flex;
-   
+   width: 47%;
    border-radius: 40px;
    justify-content: center;
+   filter: blur(3px);
+}
+.vita__card:hover{
+	filter: none;
+}
+@media screen and (max-width:1024px) {
+	.vita__card{
+		filter: none;
+	}
 }
 .card__title{
     font-size: 25px;
 }
 .card__img{
     width:500px;
+	height: 100%;
     position: relative;
     z-index: 1;
     filter: brightness(150%);
 }
-
+.card__img_2{
+	height: 100%;
+	padding-top: 50px;
+}
 
 .text__container{
  height: 100%;
@@ -70,7 +84,7 @@ flex-direction: column;
     font-weight: 600;
 }
 .vita__info{
-    width: 250px;
+   
     margin-top: 50px;
     font-size: 20px;
     line-height: normal;
@@ -119,6 +133,7 @@ flex-direction: column;
        
         font-size: 17px;
     }
+
  }
 
 
@@ -146,7 +161,9 @@ flex-direction: column;
 
 
 
-
+.all{
+	margin-bottom: 50px;
+}
 #slider { /*положение слайдера*/
     position: relative;
 	text-align: center;
@@ -164,7 +181,6 @@ flex-direction: column;
 
 #slides .image{ /*устанавливает общий размер блока с изображениями*/
 	width: 500%;
-	line-height: 0;
 }
 
 #overflow{ /*сркывает все, что находится за пределами этого блока*/
@@ -239,6 +255,11 @@ label, a{ /*при наведении на стрелки или переклю�
 	margin: -25% 0 0 0;
 	width: 100%;
 	height: 50px;
+}
+@media screen and (max-width:1024px) {
+	#controls{
+		display: none;
+	}
 }
 
 #active label{ /*стиль отдельного переключателя*/
