@@ -42,9 +42,9 @@
    margin: 0 auto;
 }
 .vita__card{
+	width: 47%;
    margin: 0 auto;
    display: flex;
-   width: 47%;
    border-radius: 40px;
    justify-content: center;
    filter: blur(3px);
