@@ -9,6 +9,7 @@
   }
   .button__number{
       margin: 0 auto;
+      margin-bottom: 10px;
   }
   .number__time{
       margin: 0 auto;

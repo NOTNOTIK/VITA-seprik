@@ -1,0 +1,41 @@
+.about{
+    margin-top: 100px;
+}
+.about__title{
+    text-align: center;
+    font-size: 50px;  
+}
+.about__container{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 100px;
+}
+.about__text{
+    font-size: 25px;
+    width: 900px;
+    font-weight: 500;
+}
+.about__image{
+    width: 400px;
+    border-radius: 400px;
+}
+.about__logo{
+    width: 100%;
+    border-radius: 400px;
+    box-shadow: 9px 0px 100px 38px rgba(37, 172, 135, 0.32);
+}
+@media screen and (max-width: 1024px) {
+    .about__container{
+        width: 100%;
+        flex-direction: column;
+        }
+        .about__text{
+            font-size: 15px;
+            width: 80%;
+        }
+        .about__image{
+            width: 60%;
+            
+        }
+}

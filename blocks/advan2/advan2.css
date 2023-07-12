@@ -1,0 +1,51 @@
+.advan2__container{
+    display: flex;
+}
+@media screen and (max-width:1024px) {
+    .advan2__container{
+        flex-direction: column;
+    }
+}
+.advan2__title{
+    text-align: center;
+    font-size: 40px;
+    color: whitesmoke;
+    width: fit-content;
+     background-color:  #5a7ca1;
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    padding: 12px;
+    z-index: 2   ;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+.advan2__box{
+    height: 150px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+margin-bottom: 200px;
+margin-top: 100px;
+
+}
+
+.advan2__point{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #25ac87;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+.advan2__point:hover{
+    transform: scale(1.1);
+}
+.advan2__info{
+    font-size: 30px;
+    font-weight: 800;
+}

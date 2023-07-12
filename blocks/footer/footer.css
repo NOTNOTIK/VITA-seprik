@@ -1,11 +1,15 @@
 .footer{
-    height: 80px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    
  
 }
 .footer__link{
-    color: #4dccc6;
+    color: black;
     text-decoration: none;
+}
+@media screen and (max-width:768px) {
+    .footer{
+        flex-direction: column;
+    }
 }

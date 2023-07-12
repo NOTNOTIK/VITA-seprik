@@ -1,5 +1,7 @@
 .vita__button{
 	width: 300px;
+	background-color: #25ac87;
+    background-image: linear-gradient(315deg, #25ac87 0%, #25ac87 74%);
 }
 
 .vita{
@@ -190,6 +192,13 @@ flex-direction: column;
 #overflow{ /*сркывает все, что находится за пределами этого блока*/
 	width: 100%;
 	overflow: hidden;
+	
+
+}
+@media screen and (max-width:768px) {
+	#overflow{
+		overflow-x: scroll;
+	}
 }
 
 article img{ /*размер изображений слайдера*/
@@ -273,7 +282,13 @@ label, a{ /*при наведении на стрелки или переклю�
 	height: 15px;
 	background: #bbb;
 }
-
+@media screen and (max-width:1024px) {
+	#active label{
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
+	}
+}
 #active{ /*расположение блока с переключателями*/
 	margin: 23% 0 0;
 	text-align: center;
