@@ -33,15 +33,7 @@
     
     
 }
-@media screen and (max-width:1024px) {
-    .intro{
-      display: block;
-      text-align: center;
-    }
-    .intro__title{
-        text-align: center;
-    }
-}
+
 .container{
     position: relative;    
     padding-top: 30px;
@@ -69,6 +61,19 @@
     position: absolute;
     bottom: 0;
 }
+
+.info__container{
+    display: flex;
+    flex-direction: row;
+}
+.intro__model{
+    margin-top: 15px;
+    font-size: 20px;
+}
+.box__title{
+    margin: 0;
+    font-size: 15px;
+}
 @media  screen and (max-width:1024px) {
 
     .intro__title{
@@ -82,15 +87,12 @@
         position: static;
     }
 }
-.info__container{
-    display: flex;
-    flex-direction: row;
-}
-.intro__model{
-    margin-top: 15px;
-    font-size: 20px;
-}
-.box__title{
-    margin: 0;
-    font-size: 15px;
+@media screen and (max-width:1024px) {
+    .intro{
+      display: block;
+      text-align: center;
+    }
+    .intro__title{
+        text-align: center;
+    }
 }

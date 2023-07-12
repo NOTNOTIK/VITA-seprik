@@ -56,7 +56,7 @@ background: linear-gradient(180deg, white, #C9FFE4);
     border-radius: 40px;
     justify-content: center;
     background-color: ghostwhite;
-   height: 800px;
+    height: 800px;
  }
 
  
@@ -111,7 +111,7 @@ background: linear-gradient(180deg, white, #C9FFE4);
     .vita__card2{
         display: block;
         width: 90%;
-        height: 100%;
+        height: 1300px;
     }
     .card__img2{
         width: 100%;
