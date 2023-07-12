@@ -111,7 +111,7 @@ background: linear-gradient(180deg, white, #C9FFE4);
     .vita__card2{
         display: block;
         width: 90%;
-        height: 1300px;
+        height: 100%;
     }
     .card__img2{
         width: 100%;
