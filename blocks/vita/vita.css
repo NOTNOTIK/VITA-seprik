@@ -7,8 +7,7 @@
 .vita{
     
     box-shadow: 0px 62px 41px -22px rgba(255, 255, 255) inset;
-	background: 
-	
+	background-image: 
 	url(https://catherineasquithgallery.com/uploads/posts/2023-02/1676700520_catherineasquithgallery-com-p-zelen-fon-dlya-prezentatsii-12.jpg);
 	
    
@@ -17,10 +16,12 @@
 }
 @media screen and (max-width: 1024px) {
 	.vita{
-		background: 
+		background-image: 
 	linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)),
 	url(https://catherineasquithgallery.com/uploads/posts/2023-02/1676700520_catherineasquithgallery-com-p-zelen-fon-dlya-prezentatsii-12.jpg);
-	}
+    background-repeat: no-repeat;
+	background-size: cover;
+}
 }
 
 .vita__container{
@@ -103,11 +104,6 @@ flex-direction: column;
 }
 .vita__bottom{
 	position: relative;
-   
-    /*box-shadow: 0px 100px 49px -10px rgba(255, 255, 255, 0.93);*/
-	box-shadow: 0px 100px 0px 0px rgba(255, 255, 255, 1);
-	
-
 
 }
 
