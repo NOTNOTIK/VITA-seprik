@@ -113,8 +113,8 @@ background: linear-gradient(180deg, white, #C9FFE4);
     }
     .vita__card2{
         display: block;
-        width: 60%;
-        height: 100%;
+        height: fit-content;
+        width: fit-content;
     }
     .card__img2{
         width: 100%;
